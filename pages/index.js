@@ -70,6 +70,80 @@ if (typeof window !== "undefined") {
       );
     });
   });
+
+  // Gallery
+
+  flipGallery();
+  function flipGallery() {
+    $(".flip-gallery > div.active")
+      .siblings("div")
+      .children()
+      .css("opacity", "0");
+    //for mobiles
+    $(".flip-gallery .filter").click(function () {
+      if ($(this).hasClass("open")) {
+        fgSetFilter();
+      } else {
+        var $size = $(this).siblings().size() * 32;
+        $(".flip-gallery .tab-titles").css("height", $size + "px");
+        $(".flip-gallery").css("padding-top", $size + 20 + "px");
+        $(this).addClass("open");
+      }
+    });
+
+    //action of tab click
+    $(".flip-gallery .tab-titles span:not(.filter)").click(function () {
+      if ($(this).hasClass("active")) {
+        return;
+      }
+      fgSetFilter();
+      $(this).addClass("active").siblings().removeClass("active");
+      var index = $(this).index() - 1;
+
+      $(".flip-gallery > div.active").animate(
+        {
+          opacity: 0,
+        },
+        100,
+        function () {
+          // Animation complete.
+
+          $(".flip-gallery > div.active").slideToggle().removeClass("active");
+          $(".flip-gallery > div").eq(index).slideToggle().addClass("active");
+          $(".flip-gallery > div.active > div:first-child").addClass("current");
+          $(".flip-gallery > div.active")
+            .siblings("div")
+            .children()
+            .css("opacity", "0");
+          fadeInItems();
+        }
+      );
+    });
+  }
+  function fgSetFilter() {
+    $(".flip-gallery .tab-titles").removeAttr("style");
+    $(".flip-gallery .filter").removeClass("open");
+    $(".flip-gallery").removeAttr("style");
+  }
+  function fadeInItems() {
+    if ($(".flip-gallery > .active").find(".current").length == 0) {
+      $(".flip-gallery > div.active").siblings("div").css("opacity", "1");
+      return;
+    }
+    $(".flip-gallery > .active .current").animate(
+      {
+        opacity: 1,
+      },
+      300,
+      function () {
+        $(".flip-gallery > .active .current")
+          .removeClass("current")
+          .next()
+          .addClass("current");
+        fadeInItems();
+      }
+    );
+  }
 }
 
 export default function Home() {
@@ -355,31 +429,15 @@ export default function Home() {
 
       <div className="container-xxl py-5" id="servicios">
         <div className="container py-5 px-lg-5">
-          <div
-            className="wow fadeInUp"
-            data-wow-delay="0.1s"
-            style={{
-              visibility: "visible",
-              animationDelay: "0.1s",
-              animationName: "fadeInUp",
-            }}
-          >
+          <div>
             <div className="section-heading">
               <h1 className="mt-5 mb-5 title-about-2 text-center">
                 Nuestros <span>Servicios</span>
               </h1>
-            </div>{" "}
+            </div>
           </div>
           <div className="row g-4">
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.1s"
-              style={{
-                visibility: "visible",
-                animationDelay: "0.1s",
-                animationName: "fadeInUp",
-              }}
-            >
+            <div className="col-lg-4 col-md-6">
               <div className="service-item d-flex flex-column text-center border-2">
                 <div className="service-icon flex-shrink-0">
                   <i className="fa bi-binoculars fa-2x" />
@@ -394,15 +452,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.3s"
-              style={{
-                visibility: "visible",
-                animationDelay: "0.3s",
-                animationName: "fadeInUp",
-              }}
-            >
+            <div className="col-lg-4 col-md-6">
               <div className="service-item d-flex flex-column text-center border-2">
                 <div className="service-icon flex-shrink-0">
                   <i className="fa bi bi-code-slash fa-2x" />
@@ -417,15 +467,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.5s"
-              style={{
-                visibility: "visible",
-                animationDelay: "0.5s",
-                animationName: "fadeInUp",
-              }}
-            >
+            <div className="col-lg-4 col-md-6">
               <div className="service-item d-flex flex-column text-center border-2">
                 <div className="service-icon flex-shrink-0">
                   <i className="fab bi bi-cart fa-2x" />
@@ -440,15 +482,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.1s"
-              style={{
-                visibility: "visible",
-                animationDelay: "0.1s",
-                animationName: "fadeInUp",
-              }}
-            >
+            <div className="col-lg-4 col-md-6">
               <div className="service-item d-flex flex-column text-center border-2">
                 <div className="service-icon flex-shrink-0">
                   <i className="fa bi-megaphone fa-2x" />
@@ -463,15 +497,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.3s"
-              style={{
-                visibility: "visible",
-                animationDelay: "0.3s",
-                animationName: "fadeInUp",
-              }}
-            >
+            <div className="col-lg-4 col-md-6">
               <div className="service-item d-flex flex-column text-center border-2">
                 <div className="service-icon flex-shrink-0">
                   <i className="fa bi bi-hand-thumbs-up fa-2x" />
@@ -486,15 +512,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div
-              className="col-lg-4 col-md-6 wow fadeInUp"
-              data-wow-delay="0.5s"
-              style={{
-                visibility: "visible",
-                animationDelay: "0.5s",
-                animationName: "fadeInUp",
-              }}
-            >
+            <div className="col-lg-4 col-md-6">
               <div className="service-item d-flex flex-column text-center border-2">
                 <div className="service-icon flex-shrink-0">
                   <i className="fab bi bi-phone fa-2x" />
@@ -512,6 +530,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Plans */}
       <div id="pricing" className="pricing-tables">
         <div className="container">
           <div className="row">
@@ -590,10 +609,321 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Plans */}
 
       {/* Intagram Post */}
-
+      <section className="instagram spad">
+        <div className="instagram">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div className="instagram__item set-bg insta_1">
+                  <div className="instagram__text">
+                    <i className="fa fa-instagram" />
+                    <a href="https://instagram.com/bucreativa?igshid=YmMyMTA2M2Y=">
+                      @ Bucreativa
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div className="instagram__item set-bg insta_2">
+                  <div className="instagram__text">
+                    <i className="fa fa-instagram" />
+                    <a href="#">@ Bucreativa</a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div
+                  className="instagram__item set-bg insta_3"
+                  data-setbg="./insta-3.jpg"
+                >
+                  <div className="instagram__text">
+                    <i className="fa fa-instagram" />
+                    <a href="#">@ Bucreativa</a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div
+                  className="instagram__item set-bg insta_4"
+                  data-setbg="img/instagram/insta-4.jpg"
+                >
+                  <div className="instagram__text">
+                    <i className="fa fa-instagram" />
+                    <a href="#">@ Bucreativa</a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div
+                  className="instagram__item set-bg insta_5"
+                  data-setbg="img/instagram/insta-5.jpg"
+                >
+                  <div className="instagram__text">
+                    <i className="fa fa-instagram" />
+                    <a href="#">@ Bucreativa</a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-4 col-sm-4 p-0">
+                <div
+                  className="instagram__item set-bg insta_6"
+                  data-setbg="img/instagram/insta-6.jpg"
+                >
+                  <div className="instagram__text">
+                    <i className="fa fa-instagram" />
+                    <a href="#">@ Bucreativa</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* Intagram Post */}
+
+      {/* Portafolio */}
+      <div className="container-xxl py-5" id="servicios">
+        <div className="container py-5 px-lg-5">
+          <div>
+            <div className="section-heading">
+              <h1 className="mt-5 mb-5 title-about-2 text-center">
+                Portafolio de <span>Proyectos</span>
+              </h1>
+            </div>
+          </div>
+          <section className="flipgallery">
+            <div className="wrapper flip-gallery">
+              <div className="active">
+                <div className="flip-container">
+                  <div className="flipper">
+                    <div className="front">
+                      <img alt="" src="http://lorempixel.com/265/265/people/" />
+                      <div>
+                        <b>Desarrollo Web </b>
+                        <br />
+                        People
+                      </div>
+                    </div>
+                    <div className="back">
+                      <b>People</b>
+                      <div>
+                        <p>Enjoying your everyday life is very important</p>
+                      </div>
+                      <a href="#">Learn More</a>
+                      <a href="#">Apply Now</a>
+                      <br />
+                    </div>
+                  </div>
+                </div>
+                <div className="flip-container">
+                  <div className="flipper">
+                    <div className="front">
+                      <img alt="" src="http://lorempixel.com/265/265/people/" />
+                      <div>
+                        <b>Desarrollo Web</b>
+                        <br />
+                        People
+                      </div>
+                    </div>
+                    <div className="back">
+                      <b>People</b>
+                      <div>
+                        <p>Enjoying your everyday life is very important</p>
+                      </div>
+                      <a href="#">Learn More</a>
+                      <a href="#">Apply Now</a>
+                      <br />
+                    </div>
+                  </div>
+                </div>
+                <div className="flip-container">
+                  <div className="flipper">
+                    <div className="front">
+                      <img alt="" src="http://lorempixel.com/265/265/people/" />
+                      <div>
+                        <b>Desarrollo Web</b>
+                        <br />
+                        People
+                      </div>
+                    </div>
+                    <div className="back">
+                      <b>People</b>
+                      <div>
+                        <p>Enjoying your everyday life is very important</p>
+                      </div>
+                      <a href="#">Learn More</a>
+                      <a href="#">Apply Now</a>
+                      <br />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="flip-container">
+                  <div className="flipper">
+                    <div className="front">
+                      <img alt="" src="http://lorempixel.com/265/265/sports/" />
+                      <div>
+                        <b>Diseño Grafico</b>
+                        <br />
+                        Sports
+                      </div>
+                    </div>
+                    <div className="back">
+                      <b>Sports</b>
+                      <div>
+                        <p>
+                          There are many sports to enjoy these days that will
+                          bring you joy
+                        </p>
+                      </div>
+                      <a href="#">Learn More</a>
+                      <a href="#">Apply Now</a>
+                      <br />
+                    </div>
+                  </div>
+                </div>
+                <div className="flip-container">
+                  <div className="flipper">
+                    <div className="front">
+                      <img alt="" src="http://lorempixel.com/265/265/sports/" />
+                      <div>
+                        <b>Diseño Grafico</b>
+                        <br />
+                        Sports
+                      </div>
+                    </div>
+                    <div className="back">
+                      <b>Sports</b>
+                      <div>
+                        <p>
+                          There are many sports to enjoy these days that will
+                          bring you joy
+                        </p>
+                      </div>
+                      <a href="#">Learn More</a>
+                      <a href="#">Apply Now</a>
+                      <br />
+                    </div>
+                  </div>
+                </div>
+                <div className="flip-container">
+                  <div className="flipper">
+                    <div className="front">
+                      <img alt="" src="http://lorempixel.com/265/265/sports/" />
+                      <div>
+                        <b>Diseño Grafico</b>
+                        <br />
+                        Sports
+                      </div>
+                    </div>
+                    <div className="back">
+                      <b>Sports</b>
+                      <div>
+                        <p>
+                          There are many sports to enjoy these days that will
+                          bring you joy
+                        </p>
+                      </div>
+                      <a href="#">Learn More</a>
+                      <a href="#">Apply Now</a>
+                      <br />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="flip-container">
+                  <div className="flipper">
+                    <div className="front">
+                      <img
+                        alt=""
+                        src="http://lorempixel.com/265/265/fashion/"
+                      />
+                      <div>
+                        <b>Marketing</b>
+                        <br />
+                        Colours
+                      </div>
+                    </div>
+                    <div className="back">
+                      <b>Colours</b>
+                      <div>
+                        <p>
+                          Rainbow is the new styles these days for the stars
+                        </p>
+                      </div>
+                      <a href="#">Learn More</a>
+                      <a href="#">Apply Now</a>
+                      <br />
+                    </div>
+                  </div>
+                </div>
+                <div className="flip-container">
+                  <div className="flipper">
+                    <div className="front">
+                      <img
+                        alt=""
+                        src="http://lorempixel.com/265/265/fashion/"
+                      />
+                      <div>
+                        <b>Marketing</b>
+                        <br />
+                        Colours
+                      </div>
+                    </div>
+                    <div className="back">
+                      <b>Colours</b>
+                      <div>
+                        <p>
+                          Rainbow is the new styles these days for the stars
+                        </p>
+                      </div>
+                      <a href="#">Learn More</a>
+                      <a href="#">Apply Now</a>
+                      <br />
+                    </div>
+                  </div>
+                </div>
+                <div className="flip-container">
+                  <div className="flipper">
+                    <div className="front">
+                      <img src="http://lorempixel.com/265/265/fashion/" />
+                      <div>
+                        <b>Marketing</b>
+                        <br />
+                        Colours
+                      </div>
+                    </div>
+                    <div className="back">
+                      <b>Colours</b>
+                      <div>
+                        <p>
+                          Rainbow is the new styles these days for the stars
+                        </p>
+                      </div>
+                      <a href="#">Learn More</a>
+                      <a href="#">Apply Now</a>
+                      <br />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <section className="tab-titles">
+                <span className="filter">Filter</span>
+                <span className="active">Desarrollo Web</span>
+                <span>Diseño Grafico</span>
+                <span>Marketing</span>
+              </section>
+            </div>
+            <section></section>
+          </section>
+        </div>
+      </div>
+      {/* Portafolio */}
 
       <Portfolio />
       <div className="container-xxl">
