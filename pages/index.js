@@ -70,80 +70,6 @@ if (typeof window !== "undefined") {
       );
     });
   });
-
-  // Gallery
-
-  flipGallery();
-  function flipGallery() {
-    $(".flip-gallery > div.active")
-      .siblings("div")
-      .children()
-      .css("opacity", "0");
-    //for mobiles
-    $(".flip-gallery .filter").click(function () {
-      if ($(this).hasClass("open")) {
-        fgSetFilter();
-      } else {
-        var $size = $(this).siblings().size() * 32;
-        $(".flip-gallery .tab-titles").css("height", $size + "px");
-        $(".flip-gallery").css("padding-top", $size + 20 + "px");
-        $(this).addClass("open");
-      }
-    });
-
-    //action of tab click
-    $(".flip-gallery .tab-titles span:not(.filter)").click(function () {
-      if ($(this).hasClass("active")) {
-        return;
-      }
-      fgSetFilter();
-      $(this).addClass("active").siblings().removeClass("active");
-      var index = $(this).index() - 1;
-
-      $(".flip-gallery > div.active").animate(
-        {
-          opacity: 0,
-        },
-        100,
-        function () {
-          // Animation complete.
-
-          $(".flip-gallery > div.active").slideToggle().removeClass("active");
-          $(".flip-gallery > div").eq(index).slideToggle().addClass("active");
-          $(".flip-gallery > div.active > div:first-child").addClass("current");
-          $(".flip-gallery > div.active")
-            .siblings("div")
-            .children()
-            .css("opacity", "0");
-          fadeInItems();
-        }
-      );
-    });
-  }
-  function fgSetFilter() {
-    $(".flip-gallery .tab-titles").removeAttr("style");
-    $(".flip-gallery .filter").removeClass("open");
-    $(".flip-gallery").removeAttr("style");
-  }
-  function fadeInItems() {
-    if ($(".flip-gallery > .active").find(".current").length == 0) {
-      $(".flip-gallery > div.active").siblings("div").css("opacity", "1");
-      return;
-    }
-    $(".flip-gallery > .active .current").animate(
-      {
-        opacity: 1,
-      },
-      300,
-      function () {
-        $(".flip-gallery > .active .current")
-          .removeClass("current")
-          .next()
-          .addClass("current");
-        fadeInItems();
-      }
-    );
-  }
 }
 
 export default function Home() {
@@ -179,7 +105,7 @@ export default function Home() {
                 <a href="#servicios">Servicios</a>
               </li>
               <li>
-                <a href="#!">Portafolio</a>
+                <a href="#portafolio">Portafolio</a>
               </li>
               <li>
                 <a
@@ -685,244 +611,200 @@ export default function Home() {
       {/* Intagram Post */}
 
       {/* Portafolio */}
-      <div className="container-xxl py-5" id="servicios">
-        <div className="container py-5 px-lg-5">
-          <div>
-            <div className="section-heading">
-              <h1 className="mt-5 mb-5 title-about-2 text-center">
-                Portafolio de <span>Proyectos</span>
-              </h1>
+
+      <div className="container-xxl" id="portafolio">
+        <div className="container">
+          <div className="work">
+            <div className="category-buttons">
+              <a href="#" data-group="desarrollo_web">
+                Desarrollo Web
+              </a>
+              <a href="#" data-group="diseño_gráfico">
+                Diseño Gráfico
+              </a>
+              <a href="#" data-group="marketing">
+                Marketing
+              </a>
+              <a href="#" className="active all" data-group="all">
+                Todos
+              </a>
+            </div>
+            <div id="grid" className="grid">
+              <div className="main">
+                <a className="card" href="#" data-groups="desarrollo_web,">
+                  <div className="box-card">
+                    <div className="card-content">
+                      <div
+                        className="card-img"
+                        style={{
+                          backgroundImage:
+                            'url("https://angel-cv.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwork_1.e87be490.jpg&w=828&q=75")',
+                        }}
+                      />
+                      <div className="card-text">
+                        <h6>Web Corporativa</h6>
+                        <b>Somax Group</b>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a className="card" href="#" data-groups="diseño_gráfico,">
+                  <div className="box-card">
+                    {/* <h2>Diseño Gráfico</h2> */}
+                    <div className="card-content">
+                      <div
+                        className="card-img"
+                        style={{
+                          backgroundImage:
+                            'url("https://i.pinimg.com/564x/61/f9/13/61f913bee4a8dc12ba8f0ce5f68c53ed.jpg")',
+                        }}
+                      />
+                      <div className="card-text">
+                        <b>Blackpink</b>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a className="card" href="#" data-groups="desarrollo_web,">
+                  <div className="box-card">
+                    <div className="card-content">
+                      <div
+                        className="card-img"
+                        style={{
+                          backgroundImage:
+                            'url("https://angel-cv.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwork_3.9db9ae65.jpg&w=828&q=75")',
+                        }}
+                      />
+                      <div className="card-text">
+                        <h6>Web Finaciera</h6>
+                        <b>Comproy</b>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a className="card" href="#" data-groups="marketing,">
+                  <div className="box-card">
+                    <div className="card-content">
+                      <div
+                        className="card-img"
+                        style={{
+                          backgroundImage:
+                            'url("https://i.pinimg.com/564x/8a/f5/7c/8af57c6f0601c13cd7b02c6b6e90d3df.jpg")',
+                        }}
+                      />
+                      <div className="card-text">
+                        <b>Blackpink</b>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a className="card" href="#" data-groups="desarrollo_web,">
+                  <div className="box-card">
+                    <div className="card-content">
+                      <div
+                        className="card-img"
+                        style={{
+                          backgroundImage:
+                            'url("https://angel-cv.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwork_4.5571a440.jpg&w=828&q=75")',
+                        }}
+                      />
+                      <div className="card-text">
+                        <h6>Web Institucional</h6>
+                        <b>Colgio El Ángel</b>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a className="card" href="#" data-groups="Marketing,">
+                  <div className="box-card">
+                    <div className="card-content">
+                      <div
+                        className="card-img"
+                        style={{
+                          backgroundImage:
+                            'url("https://i.pinimg.com/564x/8a/f5/7c/8af57c6f0601c13cd7b02c6b6e90d3df.jpg")',
+                        }}
+                      />
+                      <div className="card-text">
+                        <b>Blackpink</b>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a className="card" href="#" data-groups="desarrollo_web,">
+                  <div className="box-card">
+                    <div className="card-content">
+                      <div
+                        className="card-img"
+                        style={{
+                          backgroundImage:
+                            'url("https://angel-cv.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwork_2.5fe6476d.jpg&w=828&q=75")',
+                        }}
+                      />
+                      <div className="card-text">
+                        <h6>Web Corporativa</h6>
+                        <b>Ferro Aluminio</b>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a className="card" href="#" data-groups="diseño_gráfico,">
+                  <div className="box-card">
+                    <div className="card-content">
+                      <div
+                        className="card-img"
+                        style={{
+                          backgroundImage:
+                            'url("https://i.pinimg.com/564x/61/f9/13/61f913bee4a8dc12ba8f0ce5f68c53ed.jpg")',
+                        }}
+                      />
+                      <div className="card-text">
+                        <b>Blackpink</b>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a className="card" href="#" data-groups="marketing,">
+                  <div className="box-card">
+                    <div className="card-content">
+                      <div
+                        className="card-img"
+                        style={{
+                          backgroundImage:
+                            'url("https://i.pinimg.com/564x/8a/f5/7c/8af57c6f0601c13cd7b02c6b6e90d3df.jpg")',
+                        }}
+                      />
+                      <div className="card-text">
+                        <b>Blackpink</b>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a className="card" href="#" data-groups="marketing">
+                  <div className="box-card">
+                    <div className="card-content">
+                      <div
+                        className="card-img"
+                        style={{
+                          backgroundImage:
+                            'url("https://i.pinimg.com/564x/8a/f5/7c/8af57c6f0601c13cd7b02c6b6e90d3df.jpg")',
+                        }}
+                      />
+                      <div className="card-text">
+                        <b>Blackpink</b>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div className="guide" />
             </div>
           </div>
-          <section className="flipgallery">
-            <div className="wrapper flip-gallery">
-              <div className="active">
-                <div className="flip-container">
-                  <div className="flipper">
-                    <div className="front">
-                      <img alt="" src="http://lorempixel.com/265/265/people/" />
-                      <div>
-                        <b>Desarrollo Web </b>
-                        <br />
-                        People
-                      </div>
-                    </div>
-                    <div className="back">
-                      <b>People</b>
-                      <div>
-                        <p>Enjoying your everyday life is very important</p>
-                      </div>
-                      <a href="#">Learn More</a>
-                      <a href="#">Apply Now</a>
-                      <br />
-                    </div>
-                  </div>
-                </div>
-                <div className="flip-container">
-                  <div className="flipper">
-                    <div className="front">
-                      <img alt="" src="http://lorempixel.com/265/265/people/" />
-                      <div>
-                        <b>Desarrollo Web</b>
-                        <br />
-                        People
-                      </div>
-                    </div>
-                    <div className="back">
-                      <b>People</b>
-                      <div>
-                        <p>Enjoying your everyday life is very important</p>
-                      </div>
-                      <a href="#">Learn More</a>
-                      <a href="#">Apply Now</a>
-                      <br />
-                    </div>
-                  </div>
-                </div>
-                <div className="flip-container">
-                  <div className="flipper">
-                    <div className="front">
-                      <img alt="" src="http://lorempixel.com/265/265/people/" />
-                      <div>
-                        <b>Desarrollo Web</b>
-                        <br />
-                        People
-                      </div>
-                    </div>
-                    <div className="back">
-                      <b>People</b>
-                      <div>
-                        <p>Enjoying your everyday life is very important</p>
-                      </div>
-                      <a href="#">Learn More</a>
-                      <a href="#">Apply Now</a>
-                      <br />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="flip-container">
-                  <div className="flipper">
-                    <div className="front">
-                      <img alt="" src="http://lorempixel.com/265/265/sports/" />
-                      <div>
-                        <b>Diseño Grafico</b>
-                        <br />
-                        Sports
-                      </div>
-                    </div>
-                    <div className="back">
-                      <b>Sports</b>
-                      <div>
-                        <p>
-                          There are many sports to enjoy these days that will
-                          bring you joy
-                        </p>
-                      </div>
-                      <a href="#">Learn More</a>
-                      <a href="#">Apply Now</a>
-                      <br />
-                    </div>
-                  </div>
-                </div>
-                <div className="flip-container">
-                  <div className="flipper">
-                    <div className="front">
-                      <img alt="" src="http://lorempixel.com/265/265/sports/" />
-                      <div>
-                        <b>Diseño Grafico</b>
-                        <br />
-                        Sports
-                      </div>
-                    </div>
-                    <div className="back">
-                      <b>Sports</b>
-                      <div>
-                        <p>
-                          There are many sports to enjoy these days that will
-                          bring you joy
-                        </p>
-                      </div>
-                      <a href="#">Learn More</a>
-                      <a href="#">Apply Now</a>
-                      <br />
-                    </div>
-                  </div>
-                </div>
-                <div className="flip-container">
-                  <div className="flipper">
-                    <div className="front">
-                      <img alt="" src="http://lorempixel.com/265/265/sports/" />
-                      <div>
-                        <b>Diseño Grafico</b>
-                        <br />
-                        Sports
-                      </div>
-                    </div>
-                    <div className="back">
-                      <b>Sports</b>
-                      <div>
-                        <p>
-                          There are many sports to enjoy these days that will
-                          bring you joy
-                        </p>
-                      </div>
-                      <a href="#">Learn More</a>
-                      <a href="#">Apply Now</a>
-                      <br />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div className="flip-container">
-                  <div className="flipper">
-                    <div className="front">
-                      <img
-                        alt=""
-                        src="http://lorempixel.com/265/265/fashion/"
-                      />
-                      <div>
-                        <b>Marketing</b>
-                        <br />
-                        Colours
-                      </div>
-                    </div>
-                    <div className="back">
-                      <b>Colours</b>
-                      <div>
-                        <p>
-                          Rainbow is the new styles these days for the stars
-                        </p>
-                      </div>
-                      <a href="#">Learn More</a>
-                      <a href="#">Apply Now</a>
-                      <br />
-                    </div>
-                  </div>
-                </div>
-                <div className="flip-container">
-                  <div className="flipper">
-                    <div className="front">
-                      <img
-                        alt=""
-                        src="http://lorempixel.com/265/265/fashion/"
-                      />
-                      <div>
-                        <b>Marketing</b>
-                        <br />
-                        Colours
-                      </div>
-                    </div>
-                    <div className="back">
-                      <b>Colours</b>
-                      <div>
-                        <p>
-                          Rainbow is the new styles these days for the stars
-                        </p>
-                      </div>
-                      <a href="#">Learn More</a>
-                      <a href="#">Apply Now</a>
-                      <br />
-                    </div>
-                  </div>
-                </div>
-                <div className="flip-container">
-                  <div className="flipper">
-                    <div className="front">
-                      <img src="http://lorempixel.com/265/265/fashion/" />
-                      <div>
-                        <b>Marketing</b>
-                        <br />
-                        Colours
-                      </div>
-                    </div>
-                    <div className="back">
-                      <b>Colours</b>
-                      <div>
-                        <p>
-                          Rainbow is the new styles these days for the stars
-                        </p>
-                      </div>
-                      <a href="#">Learn More</a>
-                      <a href="#">Apply Now</a>
-                      <br />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <section className="tab-titles">
-                <span className="filter">Filter</span>
-                <span className="active">Desarrollo Web</span>
-                <span>Diseño Grafico</span>
-                <span>Marketing</span>
-              </section>
-            </div>
-            <section></section>
-          </section>
         </div>
       </div>
+
       {/* Portafolio */}
 
       <Portfolio />
