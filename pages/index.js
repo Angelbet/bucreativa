@@ -9,12 +9,9 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import hero_new from "../styles/assets/img/img-hero-new.png";
 import ita_new from "../styles/assets/img/logo-2.png";
 
-import insta_1 from "../styles/assets/img/instagram/insta-1.jpg";
-import insta_2 from "../styles/assets/img/instagram/insta-2.jpg";
-import insta_3 from "../styles/assets/img/instagram/insta-3.jpg";
-import insta_4 from "../styles/assets/img/instagram/insta-4.jpg";
-import insta_5 from "../styles/assets/img/instagram/insta-5.jpg";
-import insta_6 from "../styles/assets/img/instagram/insta-6.jpg";
+import team_1 from "../styles/assets/img/MarketingDigital.png";
+import team_2 from "../styles/assets/img/Programación.png";
+import team_3 from "../styles/assets/img/DiseñoGráfico.png";
 
 import jQuery from "jquery";
 import $ from "jquery";
@@ -538,7 +535,7 @@ export default function Home() {
       {/* Plans */}
 
       {/* Intagram Post */}
-      <section className="instagram spad">
+      <section className="instagram spad pb-5">
         <div className="instagram">
           <div className="container-fluid">
             <div className="row">
@@ -614,7 +611,10 @@ export default function Home() {
 
       <div className="container-xxl" id="portafolio">
         <div className="container">
+
           <div className="work">
+          <h1 className="text-center title-about-2 mt-5">Proyectos <span>Finalizados</span></h1>
+
             <div className="category-buttons">
               <a href="#" data-group="desarrollo_web">
                 Desarrollo Web
@@ -804,8 +804,96 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* Portafolio */}
+
+      {/* Equipo */}
+      <div className="container-xxl py-5">
+        <div className="container py-3 px-lg-5">
+          <h1 className="text-center title-about-2 mb-5">Nuestro <span>Equipo</span></h1>
+
+          <div className="row g-4">
+            <div className="col-lg-4 col-md-6">
+              <div className="team-item bg-light-3 rounded-m">
+                <div className="text-center border-bottom p-4">
+                  <Image
+                    className="img-fluid rounded-circle"
+                    src={team_1}
+                    alt="Equipo 1"
+                  />
+                  <h5>Henry Alcocer</h5>
+                  <span>CEO &amp; Marketing</span>
+                </div>
+                <div className="d-flex justify-content-center p-4">
+                  <a className="btn btn-square-2 mx-1" href="">
+                    <i className="fab bi bi-facebook" />
+                  </a>
+                  <a className="btn btn-square-2 mx-1" href="">
+                    <i className="fab bi bi-instagram" />
+                  </a>
+                  <a className="btn btn-square-2 mx-1" href="">
+                    <i className="fab bi bi-linkedin" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="team-item bg-light-2 rounded-m">
+                <div className="text-center border-bottom p-4">
+                  <Image
+                    className="img-fluid rounded-circle"
+                    src={team_2}
+                    alt="Equipo 2"
+                  />
+                  <h5>Angel Becerra</h5>
+                  <span>Diseñador Web</span>
+                </div>
+                <div className="d-flex justify-content-center p-4">
+                  <a className="btn btn-square-2 mx-1" href="">
+                    <i className="fab bi bi-facebook" />
+                  </a>
+                  <a className="btn btn-square-2 mx-1" href="">
+                    <i className="fab bi bi-github" />
+                  </a>
+                  <a className="btn btn-square-2 mx-1" href="">
+                    <i className="fab bi bi-instagram" />
+                  </a>
+                  <a className="btn btn-square-2 mx-1" href="">
+                    <i className="fab bi bi-linkedin" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="team-item bg-light-4 rounded-m">
+                <div className="text-center border-bottom p-4">
+                  <Image
+                    className="img-fluid rounded-circle"
+                    src={team_3}
+                    alt="Equipo 3"
+                  />
+                  <h5>Gunther Calderas</h5>
+                  <span>Diseñador Gráfico</span>
+                </div>
+                <div className="d-flex justify-content-center p-4">
+                  <a className="btn btn-square-2 mx-1" href="">
+                    <i className="fab bi bi-facebook" />
+                  </a>
+                  <a className="btn btn-square-2 mx-1" href="">
+                    <i className="fab bi bi-behance" />
+                  </a>
+                  <a className="btn btn-square-2 mx-1" href="">
+                    <i className="fab bi bi-instagram" />
+                  </a>
+                  <a className="btn btn-square-2 mx-1" href="">
+                    <i className="fab bi bi-linkedin" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Equipo */}
 
       <Portfolio />
       <div className="container-xxl">
