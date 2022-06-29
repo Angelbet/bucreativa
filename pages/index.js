@@ -67,6 +67,10 @@ if (typeof window !== "undefined") {
       );
     });
   });
+
+
+   
+  
 }
 
 export default function Home() {
@@ -75,9 +79,7 @@ export default function Home() {
       <Head>
         <title>Bú Creativa</title>
       </Head>
-
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
       <section className="navigation">
         <div className="nav-container">
           <div className="brand">
@@ -135,7 +137,6 @@ export default function Home() {
           </nav>
         </div>
       </section>
-
       <section id="hero" className="d-flex align-items-center">
         <div className="container">
           <div className="row">
@@ -166,7 +167,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <section className="section3">
         <div className="about-section">
           <div className="inner-container">
@@ -193,6 +193,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Objetivos */}
       <section id="main">
         <div className="container">
           <h1 className="mt-5 title-about-2">
@@ -202,11 +203,7 @@ export default function Home() {
         <div className="container-xxl py-5">
           <div className="container py-5 px-lg-5">
             <div className="row g-4">
-              <div
-                className="col-lg-4 wow fadeInUp animated"
-                data-wow-delay="0.1s"
-                style={{ visibility: "visible", animationDelay: "0.1s" }}
-              >
+              <div className="col-lg-4">
                 <div className="feature-item bg-color-1 rounded-m text-center p-4">
                   <i className="fa fa-3x bi bi-envelope-check-fill text-primary mb-4" />
                   <h2 className="mb-3 title-about-3">Visión</h2>
@@ -234,11 +231,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div
-                className="col-lg-4 wow fadeInUp animated"
-                data-wow-delay="0.5s"
-                style={{ visibility: "visible", animationDelay: "0.5s" }}
-              >
+              <div className="col-lg-4">
                 <div className="feature-item bg-color-1 rounded-m text-center p-4">
                   <i className="fa fa-3x bi bi-laptop text-primary mb-4" />
                   <h2 className="mb-3 title-about-3">Objetivos</h2>
@@ -254,27 +247,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Objetivos */}
 
-      <div
-        className="container-xxl bg-color-2 fact py-5 wow fadeInUp"
-        data-wow-delay="0.1s"
-        style={{
-          visibility: "visible",
-          animationDelay: "0.1s",
-          animationName: "fadeInUp",
-        }}
-      >
+      {/* Clientes */}
+      <div className="container-xxl bg-color-2 fact py-5">
         <div className="container py-5 px-lg-5">
           <div className="row g-4">
-            <div
-              className="col-md-6 col-lg-3 text-center wow fadeIn"
-              data-wow-delay="0.1s"
-              style={{
-                visibility: "visible",
-                animationDelay: "0.1s",
-                animationName: "fadeIn",
-              }}
-            >
+            <div className="col-md-6 col-lg-3 text-center">
               <i className="fa bi bi-patch-check-fill fa-3x text-secondary mb-3" />
               <h1
                 className="text-white mb-2 counter"
@@ -286,15 +265,7 @@ export default function Home() {
               </h1>
               <p className="text-white mb-0">Años de Experiencia</p>
             </div>
-            <div
-              className="col-md-6 col-lg-3 text-center wow fadeIn"
-              data-wow-delay="0.3s"
-              style={{
-                visibility: "visible",
-                animationDelay: "0.3s",
-                animationName: "fadeIn",
-              }}
-            >
+            <div className="col-md-6 col-lg-3 text-center">
               <i className="fa bi-people-fill fa-3x text-secondary mb-3" />
               <h1
                 className="text-white mb-2 counter"
@@ -306,15 +277,7 @@ export default function Home() {
               </h1>
               <p className="text-white mb-0">Miembros del Equipo</p>
             </div>
-            <div
-              className="col-md-6 col-lg-3 text-center wow fadeIn"
-              data-wow-delay="0.5s"
-              style={{
-                visibility: "visible",
-                animationDelay: "0.5s",
-                animationName: "fadeIn",
-              }}
-            >
+            <div className="col-md-6 col-lg-3 text-center">
               <i className="fa bi bi-person-hearts fa-3x text-secondary mb-3" />
               <h1
                 className="text-white mb-2 counter"
@@ -326,15 +289,7 @@ export default function Home() {
               </h1>
               <p className="text-white mb-0">Clientes Satisfechos</p>
             </div>
-            <div
-              className="col-md-6 col-lg-3 text-center wow fadeIn"
-              data-wow-delay="0.7s"
-              style={{
-                visibility: "visible",
-                animationDelay: "0.7s",
-                animationName: "fadeIn",
-              }}
-            >
+            <div className="col-md-6 col-lg-3 text-center">
               <i className="fa bi bi-bookmark-check-fill fa-3x text-secondary mb-3" />
               <h1
                 className="text-white mb-2 counter"
@@ -349,7 +304,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Clientes */}
 
+      {/* Servicios */}
       <div className="container-xxl py-5" id="servicios">
         <div className="container py-5 px-lg-5">
           <div>
@@ -452,9 +409,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Servicios */}
 
       {/* Plans */}
-      <div id="pricing" className="pricing-tables">
+      <div id="pricing" className="pricing-tables py-5">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 offset-lg-3 mb-3">
@@ -534,6 +492,106 @@ export default function Home() {
       </div>
       {/* Plans */}
 
+
+
+
+
+      {/* Equipo */}
+      <section id="fh5co-work">
+        <div className="container-xxl py-5">
+          <div className="container py-3 px-lg-5">
+            <h1 className="text-center title-about-3 mb-5">
+              Nuestro <span>Equipo</span>
+            </h1>
+            <div className="row g-4">
+              <div className="col-lg-4 col-md-6">
+                <div className="team-item bg-light-3 rounded-m">
+                  <div className="text-center border-bottom p-4">
+                    <Image
+                      className="img-fluid rounded-circle"
+                      src={team_1}
+                      alt="Equipo 1"
+                    />
+                    <h5>Henry Alcocer</h5>
+                    <span>CEO &amp; Marketing</span>
+                  </div>
+                  <div className="d-flex justify-content-center p-4">
+                    <a className="btn btn-square-2 mx-1" href="">
+                      <i className="fab bi bi-facebook" />
+                    </a>
+                    <a className="btn btn-square-2 mx-1" href="">
+                      <i className="fab bi bi-instagram" />
+                    </a>
+                    <a className="btn btn-square-2 mx-1" href="">
+                      <i className="fab bi bi-linkedin" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6">
+                <div className="team-item bg-light-2 rounded-m">
+                  <div className="text-center border-bottom p-4">
+                    <Image
+                      className="img-fluid rounded-circle"
+                      src={team_2}
+                      alt="Equipo 2"
+                    />
+                    <h5>Angel Becerra</h5>
+                    <span>Diseñador Web</span>
+                  </div>
+                  <div className="d-flex justify-content-center p-4">
+                    <a className="btn btn-square-2 mx-1" href="https://www.facebook.com/AngelBecerra13" target="_blank">
+                      <i className="fab bi bi-facebook" />
+                    </a>
+                    <a className="btn btn-square-2 mx-1" href="https://github.com/Angelbet/" target="_blank">
+                      <i className="fab bi bi-github" />
+                    </a>
+                    <a className="btn btn-square-2 mx-1" href="https://www.instagram.com/angil_b3/" target="_blank">
+                      <i className="fab bi bi-instagram" />
+                    </a>
+                    <a className="btn btn-square-2 mx-1" href="http://linkedin.com/in/angel-becerra-2a4435202" target="_blank">
+                      <i className="fab bi bi-linkedin" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6">
+                <div className="team-item bg-light-4 rounded-m">
+                  <div className="text-center border-bottom p-4">
+                    <Image
+                      className="img-fluid rounded-circle"
+                      src={team_3}
+                      alt="Equipo 3"
+                    />
+                    <h5>Gunther Calderas</h5>
+                    <span>Diseñador Gráfico</span>
+                  </div>
+                  <div className="d-flex justify-content-center p-4">
+                    <a className="btn btn-square-2 mx-1" href="">
+                      <i className="fab bi bi-facebook" />
+                    </a>
+                    <a className="btn btn-square-2 mx-1" href="">
+                      <i className="fab bi bi-behance" />
+                    </a>
+                    <a className="btn btn-square-2 mx-1" href="">
+                      <i className="fab bi bi-instagram" />
+                    </a>
+                    <a className="btn btn-square-2 mx-1" href="">
+                      <i className="fab bi bi-linkedin" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Equipo */}
+
+      {/* Portafolio */}
+      <Portfolio />
+      {/* Portafolio */}
+
       {/* Intagram Post */}
       <section className="instagram spad pb-5">
         <div className="instagram">
@@ -606,296 +664,6 @@ export default function Home() {
         </div>
       </section>
       {/* Intagram Post */}
-
-      {/* Portafolio */}
-
-      <div className="container-xxl" id="portafolio">
-        <div className="container">
-
-          <div className="work">
-          <h1 className="text-center title-about-2 mt-5">Proyectos <span>Finalizados</span></h1>
-
-            <div className="category-buttons">
-              <a href="#" data-group="desarrollo_web">
-                Desarrollo Web
-              </a>
-              <a href="#" data-group="diseño_gráfico">
-                Diseño Gráfico
-              </a>
-              <a href="#" data-group="marketing">
-                Marketing
-              </a>
-              <a href="#" className="active all" data-group="all">
-                Todos
-              </a>
-            </div>
-            <div id="grid" className="grid">
-              <div className="main">
-                <a className="card" href="#" data-groups="desarrollo_web,">
-                  <div className="box-card">
-                    <div className="card-content">
-                      <div
-                        className="card-img"
-                        style={{
-                          backgroundImage:
-                            'url("https://angel-cv.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwork_1.e87be490.jpg&w=828&q=75")',
-                        }}
-                      />
-                      <div className="card-text">
-                        <h6>Web Corporativa</h6>
-                        <b>Somax Group</b>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-
-                <a className="card" href="#" data-groups="diseño_gráfico,">
-                  <div className="box-card">
-                    {/* <h2>Diseño Gráfico</h2> */}
-                    <div className="card-content">
-                      <div
-                        className="card-img"
-                        style={{
-                          backgroundImage:
-                            'url("https://i.pinimg.com/564x/61/f9/13/61f913bee4a8dc12ba8f0ce5f68c53ed.jpg")',
-                        }}
-                      />
-                      <div className="card-text">
-                        <b>Blackpink</b>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a className="card" href="#" data-groups="desarrollo_web,">
-                  <div className="box-card">
-                    <div className="card-content">
-                      <div
-                        className="card-img"
-                        style={{
-                          backgroundImage:
-                            'url("https://angel-cv.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwork_3.9db9ae65.jpg&w=828&q=75")',
-                        }}
-                      />
-                      <div className="card-text">
-                        <h6>Web Finaciera</h6>
-                        <b>Comproy</b>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a className="card" href="#" data-groups="marketing,">
-                  <div className="box-card">
-                    <div className="card-content">
-                      <div
-                        className="card-img"
-                        style={{
-                          backgroundImage:
-                            'url("https://i.pinimg.com/564x/8a/f5/7c/8af57c6f0601c13cd7b02c6b6e90d3df.jpg")',
-                        }}
-                      />
-                      <div className="card-text">
-                        <b>Blackpink</b>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a className="card" href="#" data-groups="desarrollo_web,">
-                  <div className="box-card">
-                    <div className="card-content">
-                      <div
-                        className="card-img"
-                        style={{
-                          backgroundImage:
-                            'url("https://angel-cv.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwork_4.5571a440.jpg&w=828&q=75")',
-                        }}
-                      />
-                      <div className="card-text">
-                        <h6>Web Institucional</h6>
-                        <b>Colgio El Ángel</b>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a className="card" href="#" data-groups="Marketing,">
-                  <div className="box-card">
-                    <div className="card-content">
-                      <div
-                        className="card-img"
-                        style={{
-                          backgroundImage:
-                            'url("https://i.pinimg.com/564x/8a/f5/7c/8af57c6f0601c13cd7b02c6b6e90d3df.jpg")',
-                        }}
-                      />
-                      <div className="card-text">
-                        <b>Blackpink</b>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a className="card" href="#" data-groups="desarrollo_web,">
-                  <div className="box-card">
-                    <div className="card-content">
-                      <div
-                        className="card-img"
-                        style={{
-                          backgroundImage:
-                            'url("https://angel-cv.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fwork_2.5fe6476d.jpg&w=828&q=75")',
-                        }}
-                      />
-                      <div className="card-text">
-                        <h6>Web Corporativa</h6>
-                        <b>Ferro Aluminio</b>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a className="card" href="#" data-groups="diseño_gráfico,">
-                  <div className="box-card">
-                    <div className="card-content">
-                      <div
-                        className="card-img"
-                        style={{
-                          backgroundImage:
-                            'url("https://i.pinimg.com/564x/61/f9/13/61f913bee4a8dc12ba8f0ce5f68c53ed.jpg")',
-                        }}
-                      />
-                      <div className="card-text">
-                        <b>Blackpink</b>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a className="card" href="#" data-groups="marketing,">
-                  <div className="box-card">
-                    <div className="card-content">
-                      <div
-                        className="card-img"
-                        style={{
-                          backgroundImage:
-                            'url("https://i.pinimg.com/564x/8a/f5/7c/8af57c6f0601c13cd7b02c6b6e90d3df.jpg")',
-                        }}
-                      />
-                      <div className="card-text">
-                        <b>Blackpink</b>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <a className="card" href="#" data-groups="marketing">
-                  <div className="box-card">
-                    <div className="card-content">
-                      <div
-                        className="card-img"
-                        style={{
-                          backgroundImage:
-                            'url("https://i.pinimg.com/564x/8a/f5/7c/8af57c6f0601c13cd7b02c6b6e90d3df.jpg")',
-                        }}
-                      />
-                      <div className="card-text">
-                        <b>Blackpink</b>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <div className="guide" />
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Portafolio */}
-
-      {/* Equipo */}
-      <div className="container-xxl py-5">
-        <div className="container py-3 px-lg-5">
-          <h1 className="text-center title-about-2 mb-5">Nuestro <span>Equipo</span></h1>
-
-          <div className="row g-4">
-            <div className="col-lg-4 col-md-6">
-              <div className="team-item bg-light-3 rounded-m">
-                <div className="text-center border-bottom p-4">
-                  <Image
-                    className="img-fluid rounded-circle"
-                    src={team_1}
-                    alt="Equipo 1"
-                  />
-                  <h5>Henry Alcocer</h5>
-                  <span>CEO &amp; Marketing</span>
-                </div>
-                <div className="d-flex justify-content-center p-4">
-                  <a className="btn btn-square-2 mx-1" href="">
-                    <i className="fab bi bi-facebook" />
-                  </a>
-                  <a className="btn btn-square-2 mx-1" href="">
-                    <i className="fab bi bi-instagram" />
-                  </a>
-                  <a className="btn btn-square-2 mx-1" href="">
-                    <i className="fab bi bi-linkedin" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="team-item bg-light-2 rounded-m">
-                <div className="text-center border-bottom p-4">
-                  <Image
-                    className="img-fluid rounded-circle"
-                    src={team_2}
-                    alt="Equipo 2"
-                  />
-                  <h5>Angel Becerra</h5>
-                  <span>Diseñador Web</span>
-                </div>
-                <div className="d-flex justify-content-center p-4">
-                  <a className="btn btn-square-2 mx-1" href="">
-                    <i className="fab bi bi-facebook" />
-                  </a>
-                  <a className="btn btn-square-2 mx-1" href="">
-                    <i className="fab bi bi-github" />
-                  </a>
-                  <a className="btn btn-square-2 mx-1" href="">
-                    <i className="fab bi bi-instagram" />
-                  </a>
-                  <a className="btn btn-square-2 mx-1" href="">
-                    <i className="fab bi bi-linkedin" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="team-item bg-light-4 rounded-m">
-                <div className="text-center border-bottom p-4">
-                  <Image
-                    className="img-fluid rounded-circle"
-                    src={team_3}
-                    alt="Equipo 3"
-                  />
-                  <h5>Gunther Calderas</h5>
-                  <span>Diseñador Gráfico</span>
-                </div>
-                <div className="d-flex justify-content-center p-4">
-                  <a className="btn btn-square-2 mx-1" href="">
-                    <i className="fab bi bi-facebook" />
-                  </a>
-                  <a className="btn btn-square-2 mx-1" href="">
-                    <i className="fab bi bi-behance" />
-                  </a>
-                  <a className="btn btn-square-2 mx-1" href="">
-                    <i className="fab bi bi-instagram" />
-                  </a>
-                  <a className="btn btn-square-2 mx-1" href="">
-                    <i className="fab bi bi-linkedin" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Equipo */}
-
-      <Portfolio />
       <div className="container-xxl">
         <Footer />
       </div>

@@ -166,7 +166,7 @@ span.bu {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
 }
 .brand {
   position: absolute;
@@ -1415,6 +1415,11 @@ div.insta_6 {
     width: 700px;
   }
 }
+@media (max-width: 767px) {
+  .work .grid {
+    width: 500px;
+  }
+}
 @media (max-width: 720px) {
   .work .grid {
     width: 100%;
@@ -1436,7 +1441,6 @@ div.insta_6 {
   opacity: 1;
 }
 .work .card {
-  background: #fff;
   display: block;
   text-decoration: none;
   width: 32%;
@@ -1515,7 +1519,8 @@ div.insta_6 {
   gap: 20px;
   padding-inline: 20px;
   padding-block: 20px;
-  background: linear-gradient(45deg, #2581dc, #791af2);  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(45deg, #791af2 0%, #2581dc 100%);
+  box-shadow: 0 5px 20px rgba(120, 26, 242, 0.507);
   border-radius: 10px;
 }
 .box-card > h2 {
@@ -1581,6 +1586,14 @@ div.insta_6 {
     height: 200px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .box-card {
+    width: auto;
+  }
+  .box-card .card-content .card-img {
+    height: 250px;
+  }
+}
 @media only screen and (max-width: 730px) {
   .box-card {
     width: auto;
@@ -1602,7 +1615,7 @@ div.insta_6 {
     height: 155px;
   }
 }
-@media only screen and (max-width: 659px) and (max-width: 570px) and (max-width: 460px) {
+@media only screen and (max-width: 700px) and (max-width: 659px) and (max-width: 570px) and (max-width: 460px) {
   .box-card {
     width: 100%;
   }
@@ -1660,14 +1673,100 @@ div.insta_6 {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .bg-light-2 {
-  background-color: rgb(98 34 204 / 10%);
+  background: linear-gradient(45deg, #791af2 0%, #2581dc 100%);
+  box-shadow: 0 5px 20px rgb(121 26 242 / 81%);
 }
+
 .bg-light-3 {
-  background-color: rgb(10 88 202 / 19%);
+  background: linear-gradient(45deg, #791af2 0%, #2581dc 100%);
+  box-shadow: 0 5px 20px rgb(121 26 242 / 81%);
 }
 .bg-light-4 {
-  background-color: rgb(10 88 202 / 19%);
+  background: linear-gradient(45deg, #791af2 0%, #2581dc 100%);
+  box-shadow: 0 5px 20px rgb(121 26 242 / 81%);
+}
+h1.title-about-3 span {
+  color: #fff;
+}
+h1.title-about-3 {
+  color: #000;
+  font-size: 800;
+}
+#fh5co-work {
+  overflow: hidden;
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #9452d3;
+  background-image: -webkit-repeating-linear-gradient(
+    top right,
+    #9452d3 0%,
+    #2581dc 100%
+  );
+  background-image: repeating-linear-gradient(
+    to bottom right,
+    #9452d3 0%,
+    #2581dc 100%
+  );
+  background-image: -ms-repeating-linear-gradient(
+    top left,
+    #9452d3 0%,
+    #2581dc 100%
+  );
+}
+#fh5co-services,
+#fh5co-work,
+#fh5co-counters {
+  padding: 7em 0;
+}
+#fh5co-services,
+#fh5co-testimonials,
+#fh5co-counters,
+#fh5co-work,
+#fh5co-contact,
+#fh5co-about {
+  padding: 4em 0;
+}
+#fh5co-work:before {
+  top: 0;
+  margin-top: -35px;
+}
+#fh5co-work:before,
+#fh5co-work:after {
+  position: absolute;
+  transform: rotate(-1.7deg);
+  -ms-transform: rotate(-1.7deg);
+  -webkit-transform: rotate(-1.7deg);
+  -o-transform: rotate(-1.7deg);
+  -moz-transform: rotate(-1.7deg);
+  background-color: #fff;
+  content: "";
+  z-index: 3;
+  display: inline-block;
+  height: 70px;
+  padding: 0;
+  width: 101%;
+}
+#fh5co-work:after {
+  bottom: 0;
+  margin-bottom: -35px;
+}
+#fh5co-work:before,
+#fh5co-work:after {
+  position: absolute;
+  transform: rotate(-1.7deg);
+  -ms-transform: rotate(-1.7deg);
+  -webkit-transform: rotate(-1.7deg);
+  -o-transform: rotate(-1.7deg);
+  -moz-transform: rotate(-1.7deg);
+  background-color: #fff;
+  content: "";
+  z-index: 3;
+  display: inline-block;
+  height: 70px;
+  padding: 0;
+  width: 101%;
 }
 /*--------------------------------------------------------------
 # Equipo
 --------------------------------------------------------------*/
+
