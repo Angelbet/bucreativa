@@ -540,16 +540,16 @@ export default function Home() {
                     <span>Diseñador Web</span>
                   </div>
                   <div className="d-flex justify-content-center p-4">
-                    <a className="btn btn-square-2 mx-1" href="https://www.facebook.com/AngelBecerra13" target="_blank">
+                    <a className="btn btn-square-2 mx-1" href="https://www.facebook.com/AngelBecerra13" target="_blank" rel="noreferrer">
                       <i className="fab bi bi-facebook" />
                     </a>
-                    <a className="btn btn-square-2 mx-1" href="https://github.com/Angelbet/" target="_blank">
+                    <a className="btn btn-square-2 mx-1" href="https://github.com/Angelbet/" target="_blank" rel="noreferrer">
                       <i className="fab bi bi-github" />
                     </a>
-                    <a className="btn btn-square-2 mx-1" href="https://www.instagram.com/angil_b3/" target="_blank">
+                    <a className="btn btn-square-2 mx-1" href="https://www.instagram.com/angil_b3/" target="_blank" rel="noreferrer">
                       <i className="fab bi bi-instagram" />
                     </a>
-                    <a className="btn btn-square-2 mx-1" href="http://linkedin.com/in/angel-becerra-2a4435202" target="_blank">
+                    <a className="btn btn-square-2 mx-1" href="http://linkedin.com/in/angel-becerra-2a4435202" target="_blank" rel="noreferrer">
                       <i className="fab bi bi-linkedin" />
                     </a>
                   </div>
