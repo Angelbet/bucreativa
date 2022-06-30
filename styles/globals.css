@@ -26,6 +26,22 @@ p {
 body {
   overflow-x: hidden;
 }
+/* ===== Scrollbar CSS ===== */
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 13px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0076de;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #791af2;
+    border-radius: 11px;
+    border: 4px solid #5405a3;
+  }
+
 
 /*--------------------------------------------------------------
 # NavBar
@@ -69,21 +85,21 @@ span.bu {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .logo {
-    /*       margin-left: 5px; */
+          margin-left: 5px;
   }
-}
+} */
 
 #navbar ul {
   display: inline-block;
-  float: right;
+  float: none;
   list-style: none;
   /* margin-right: 14px; */
   margin-top: -2px;
   text-align: right;
   transition: transform 0.5s ease-out;
-  -webkit-transition: transform 0.5s ease-out;
+  /* -webkit-transition: transform 0.5s ease-out; */
 }
 @media (max-width: 640px) {
   #navbar ul {
@@ -112,14 +128,14 @@ span.bu {
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
+  /* -webkit-transition: all 0.5s ease; */
 }
 
 #navbar li a:hover {
   /* border-bottom: 1px solid rgb(28, 121, 184); */
   color: rgb(28, 121, 184);
   transition: all 1s ease;
-  -webkit-transition: all 1s ease;
+  /* -webkit-transition: all 1s ease; */
   text-decoration: none;
 }
 
@@ -714,6 +730,70 @@ h1.title-about-2 span {
 .rounded-m {
   border-radius: 1.25rem !important;
 }
+.fh5co-work-2 {
+  overflow: hidden;
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #9452d3;
+  background-image: -webkit-repeating-linear-gradient(
+    top right,
+    #9452d3 0%,
+    #2581dc 100%
+  );
+  background-image: repeating-linear-gradient(
+    to bottom right,
+    #9452d3 0%,
+    #2581dc 100%
+  );
+  background-image: -ms-repeating-linear-gradient(
+    top left,
+    #9452d3 0%,
+    #2581dc 100%
+  );
+}
+.fh5co-work-2 {
+  padding: 4em 0;
+}
+.fh5co-work-2:before {
+  top: 0;
+  margin-top: -35px;
+}
+.fh5co-work-2:before,
+.fh5co-work-2:after {
+  position: absolute;
+  transform: rotate(1.7deg);
+  /* -ms-transform: rotate(-1.7deg);
+  -webkit-transform: rotate(-1.7deg);
+  -o-transform: rotate(-1.7deg);
+  -moz-transform: rotate(-1.7deg); */
+  background-color: #fff;
+  content: "";
+  z-index: 3;
+  display: inline-block;
+  height: 70px;
+  padding: 0;
+  width: 101%;
+}
+.fh5co-work-2:after {
+  bottom: 0;
+  margin-bottom: -35px;
+}
+.fh5co-work-2:before,
+.fh5co-work-2:after {
+  position: absolute;
+  transform: rotate(1.7deg);
+  /* -ms-transform: rotate(-1.7deg);
+  -webkit-transform: rotate(-1.7deg);
+  -o-transform: rotate(-1.7deg);
+  -moz-transform: rotate(-1.7deg); */
+  background-color: #fff;
+  content: "";
+  z-index: 3;
+  display: inline-block;
+  height: 70px;
+  padding: 0;
+  width: 101%;
+}
 /*--------------------------------------------------------------
 # Servicios Seccion
 --------------------------------------------------------------*/
@@ -874,7 +954,8 @@ Servicios 2
 .service-item {
   position: relative;
   padding: 45px 30px;
-  background-color: rgb(98 34 204 / 10%);
+  background: linear-gradient(-45deg, #791af2 0%, #2581dc 100%);
+  box-shadow: 0 5px 20px rgb(121 26 242 / 81%);
   overflow: hidden;
   transition: 0.5s;
 }
@@ -953,7 +1034,7 @@ Servicios 2
 h5.item {
   font-size: 20px;
   font-weight: 700;
-  color: #2a2a2a;
+  color: #fff;
 }
 .border-2 {
   border-radius: 2.2rem !important;
@@ -1076,6 +1157,7 @@ Portafolio
   text-align: center;
   background: -webkit-linear-gradient(#e3ca66, #b48e47);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 4.5em;
   font-family: "Poppins-Medium";
@@ -1085,6 +1167,7 @@ Portafolio
   text-align: center;
   background: -webkit-linear-gradient(#e3ca66, #b48e47);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
   font-size: 20px;
@@ -1103,7 +1186,7 @@ Portafolio
   height: auto;
   /* filter: url(filters.svg#grayscale); */
   filter: gray;
-  -webkit-filter: grayscale(1);
+  /* -webkit-filter: grayscale(1); */
   transition: 0.9s;
 }
 .grid-item img:hover {
@@ -1734,10 +1817,10 @@ h1.title-about-3 {
 #fh5co-work:after {
   position: absolute;
   transform: rotate(-1.7deg);
-  -ms-transform: rotate(-1.7deg);
+  /* -ms-transform: rotate(-1.7deg);
   -webkit-transform: rotate(-1.7deg);
   -o-transform: rotate(-1.7deg);
-  -moz-transform: rotate(-1.7deg);
+  -moz-transform: rotate(-1.7deg); */
   background-color: #fff;
   content: "";
   z-index: 3;
@@ -1754,10 +1837,10 @@ h1.title-about-3 {
 #fh5co-work:after {
   position: absolute;
   transform: rotate(-1.7deg);
-  -ms-transform: rotate(-1.7deg);
+  /* -ms-transform: rotate(-1.7deg);
   -webkit-transform: rotate(-1.7deg);
   -o-transform: rotate(-1.7deg);
-  -moz-transform: rotate(-1.7deg);
+  -moz-transform: rotate(-1.7deg); */
   background-color: #fff;
   content: "";
   z-index: 3;
@@ -1769,4 +1852,3 @@ h1.title-about-3 {
 /*--------------------------------------------------------------
 # Equipo
 --------------------------------------------------------------*/
-

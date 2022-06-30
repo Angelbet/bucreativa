@@ -67,10 +67,6 @@ if (typeof window !== "undefined") {
       );
     });
   });
-
-
-   
-  
 }
 
 export default function Home() {
@@ -195,13 +191,12 @@ export default function Home() {
 
       {/* Objetivos */}
       <section id="main">
-        <div className="container">
-          <h1 className="mt-5 title-about-2">
-            Nuestros <span>Objetivos</span>
-          </h1>
-        </div>
+        <div className="container"></div>
         <div className="container-xxl py-5">
           <div className="container py-5 px-lg-5">
+            <h1 className="mb-5 title-about-2 text-center">
+              Nuestros <span>Objetivos</span>
+            </h1>
             <div className="row g-4">
               <div className="col-lg-4">
                 <div className="feature-item bg-color-1 rounded-m text-center p-4">
@@ -307,108 +302,115 @@ export default function Home() {
       {/* Clientes */}
 
       {/* Servicios */}
-      <div className="container-xxl py-5" id="servicios">
-        <div className="container py-5 px-lg-5">
-          <div>
-            <div className="section-heading">
-              <h1 className="mt-5 mb-5 title-about-2 text-center">
-                Nuestros <span>Servicios</span>
-              </h1>
-            </div>
-          </div>
-          <div className="row g-4">
-            <div className="col-lg-4 col-md-6">
-              <div className="service-item d-flex flex-column text-center border-2">
-                <div className="service-icon flex-shrink-0">
-                  <i className="fa bi-binoculars fa-2x" />
+      <section id="servicios">
+        <div className="fh5co-work-2">
+          <div className="container-xxl py-5">
+            <div className="container-xxl">
+              <div className="container px-lg-5">
+                <div>
+                  <div className="section-heading">
+                    <h1 className="mb-5 title-about-3 text-center">
+                      Nuestros <span>Servicios</span>
+                    </h1>
+                  </div>
                 </div>
-                <h5 className="mb-3 item">SEO</h5>
-                <p className="m-0">
-                  Con el objetivo de llevar a tu web a las primeros lugares de
-                  los buscadores mas importantes.
-                </p>
-                <a className="btn btn-square" href="">
-                  <i className="fa bi bi-arrow-right" />
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="service-item d-flex flex-column text-center border-2">
-                <div className="service-icon flex-shrink-0">
-                  <i className="fa bi bi-code-slash fa-2x" />
+                <div className="row g-4">
+                  <div className="col-lg-4 col-md-6">
+                    <div className="service-item d-flex flex-column text-center border-2">
+                      <div className="service-icon flex-shrink-0">
+                        <i className="fa bi-binoculars fa-2x" />
+                      </div>
+                      <h5 className="mb-3 item">SEO</h5>
+                      <p className="m-0">
+                        Con el objetivo de llevar a tu web a las primeros
+                        lugares de los buscadores mas importantes.
+                      </p>
+                      <a className="btn btn-square">
+                        <i className="fa bi bi-arrow-right" />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6">
+                    <div className="service-item d-flex flex-column text-center border-2">
+                      <div className="service-icon flex-shrink-0">
+                        <i className="fa bi bi-code-slash fa-2x" />
+                      </div>
+                      <h5 className="mb-3 item">Diseño Web</h5>
+                      <p className="m-0">
+                        Diseño de portales profesionales a la medida y 100%
+                        optimazados para el SEO.
+                      </p>
+                      <a className="btn btn-square">
+                        <i className="fa bi bi-arrow-right" />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6">
+                    <div className="service-item d-flex flex-column text-center border-2">
+                      <div className="service-icon flex-shrink-0">
+                        <i className="fab bi bi-cart fa-2x" />
+                      </div>
+                      <h5 className="mb-3 item">Tiendas Virtuales</h5>
+                      <p className="m-0">
+                        Creación de E-commerce en Woocommerce, Prestashop,
+                        Magneto, Wordpress, Shopify.
+                      </p>
+                      <a className="btn btn-square">
+                        <i className="fa bi bi-arrow-right" />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6">
+                    <div className="service-item d-flex flex-column text-center border-2">
+                      <div className="service-icon flex-shrink-0">
+                        <i className="fa bi-megaphone fa-2x" />
+                      </div>
+                      <h5 className="mb-3 item">Social Media</h5>
+                      <p className="m-0">
+                        Gestión estrategias de redes sociales, mejor alcance y
+                        oportunidades de marca.
+                      </p>
+                      <a className="btn btn-square">
+                        <i className="fa bi bi-arrow-right" />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6">
+                    <div className="service-item d-flex flex-column text-center border-2">
+                      <div className="service-icon flex-shrink-0">
+                        <i className="fa bi bi-hand-thumbs-up fa-2x" />
+                      </div>
+                      <h5 className="mb-3 item">ADS</h5>
+                      <p className="m-0">
+                        Amplio alcance de tu marca con uno de los métodos
+                        publicitarios mas efectivos.
+                      </p>
+                      <a className="btn btn-square">
+                        <i className="fa bi bi-arrow-right" />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 col-md-6">
+                    <div className="service-item d-flex flex-column text-center border-2">
+                      <div className="service-icon flex-shrink-0">
+                        <i className="fab bi bi-phone fa-2x" />
+                      </div>
+                      <h5 className="mb-3 item">Desarrollo de Apps</h5>
+                      <p className="m-0">
+                        Diseño y desarrollo de aplicaciones moviles
+                        multiplataforma.
+                      </p>
+                      <a className="btn btn-square">
+                        <i className="fa bi bi-arrow-right" />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <h5 className="mb-3 item">Diseño Web</h5>
-                <p className="m-0">
-                  Diseño de portales profesionales a la medida y 100%
-                  optimazados para el SEO.
-                </p>
-                <a className="btn btn-square" href="">
-                  <i className="fa bi bi-arrow-right" />
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="service-item d-flex flex-column text-center border-2">
-                <div className="service-icon flex-shrink-0">
-                  <i className="fab bi bi-cart fa-2x" />
-                </div>
-                <h5 className="mb-3 item">Tiendas Virtuales</h5>
-                <p className="m-0">
-                  Creación de E-commerce en Woocommerce, Prestashop, Magneto,
-                  Shopify.
-                </p>
-                <a className="btn btn-square" href="">
-                  <i className="fa bi bi-arrow-right" />
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="service-item d-flex flex-column text-center border-2">
-                <div className="service-icon flex-shrink-0">
-                  <i className="fa bi-megaphone fa-2x" />
-                </div>
-                <h5 className="mb-3 item">Social Media</h5>
-                <p className="m-0">
-                  Gestión estrategias de redes sociales, mejor alcance y
-                  oportunidades de marca.
-                </p>
-                <a className="btn btn-square" href="">
-                  <i className="fa bi bi-arrow-right" />
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="service-item d-flex flex-column text-center border-2">
-                <div className="service-icon flex-shrink-0">
-                  <i className="fa bi bi-hand-thumbs-up fa-2x" />
-                </div>
-                <h5 className="mb-3 item">ADS</h5>
-                <p className="m-0">
-                  Amplio alcance de tu marca con uno de los métodos
-                  publicitarios mas efectivos.
-                </p>
-                <a className="btn btn-square" href="">
-                  <i className="fa bi bi-arrow-right" />
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="service-item d-flex flex-column text-center border-2">
-                <div className="service-icon flex-shrink-0">
-                  <i className="fab bi bi-phone fa-2x" />
-                </div>
-                <h5 className="mb-3 item">Desarrollo de Apps</h5>
-                <p className="m-0">
-                  Diseño y desarrollo de aplicaciones moviles multiplataforma.
-                </p>
-                <a className="btn btn-square" href="">
-                  <i className="fa bi bi-arrow-right" />
-                </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       {/* Servicios */}
 
       {/* Plans */}
@@ -492,10 +494,6 @@ export default function Home() {
       </div>
       {/* Plans */}
 
-
-
-
-
       {/* Equipo */}
       <section id="fh5co-work">
         <div className="container-xxl py-5">
@@ -540,16 +538,36 @@ export default function Home() {
                     <span>Diseñador Web</span>
                   </div>
                   <div className="d-flex justify-content-center p-4">
-                    <a className="btn btn-square-2 mx-1" href="https://www.facebook.com/AngelBecerra13" target="_blank" rel="noreferrer">
+                    <a
+                      className="btn btn-square-2 mx-1"
+                      href="https://www.facebook.com/AngelBecerra13"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <i className="fab bi bi-facebook" />
                     </a>
-                    <a className="btn btn-square-2 mx-1" href="https://github.com/Angelbet/" target="_blank" rel="noreferrer">
+                    <a
+                      className="btn btn-square-2 mx-1"
+                      href="https://github.com/Angelbet/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <i className="fab bi bi-github" />
                     </a>
-                    <a className="btn btn-square-2 mx-1" href="https://www.instagram.com/angil_b3/" target="_blank" rel="noreferrer">
+                    <a
+                      className="btn btn-square-2 mx-1"
+                      href="https://www.instagram.com/angil_b3/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <i className="fab bi bi-instagram" />
                     </a>
-                    <a className="btn btn-square-2 mx-1" href="http://linkedin.com/in/angel-becerra-2a4435202" target="_blank" rel="noreferrer">
+                    <a
+                      className="btn btn-square-2 mx-1"
+                      href="http://linkedin.com/in/angel-becerra-2a4435202"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <i className="fab bi bi-linkedin" />
                     </a>
                   </div>

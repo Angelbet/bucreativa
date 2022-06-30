@@ -47,10 +47,16 @@ function Footer() {
               <a className="btn btn-outline-light btn-social" href="">
                 <i className="fab bi-twitter" />
               </a>
-              <a className="btn btn-outline-light btn-social" href="https://www.facebook.com/B%C3%BA-Creativa-112241858180778/">
+              <a
+                className="btn btn-outline-light btn-social"
+                href="https://www.facebook.com/B%C3%BA-Creativa-112241858180778/"
+              >
                 <i className="fab bi-facebook" />
               </a>
-              <a className="btn btn-outline-light btn-social" href="https://instagram.com/bucreativa?igshid=YmMyMTA2M2Y=">
+              <a
+                className="btn btn-outline-light btn-social"
+                href="https://instagram.com/bucreativa?igshid=YmMyMTA2M2Y="
+              >
                 <i className="fab bi-instagram" />
               </a>
               <a className="btn btn-outline-light btn-social" href="">
@@ -60,7 +66,7 @@ function Footer() {
           </div>
           <div className="col-md-6 col-lg-3">
             <p className="section-title text-white h5 mb-4">
-            Enlace Rápido
+              Enlace Rápido
               <span />
             </p>
             <a className="btn btn-link" href="#nosotros">
@@ -73,7 +79,8 @@ function Footer() {
               <i className="bi bi-caret-right-fill"></i> Política de Privacidad
             </a>
             <a className="btn btn-link" href="">
-              <i className="bi bi-caret-right-fill"></i> Terminos &amp; Condiciones
+              <i className="bi bi-caret-right-fill"></i> Terminos &amp;
+              Condiciones
             </a>
           </div>
           <div className="col-md-6 col-lg-3">
@@ -83,46 +90,22 @@ function Footer() {
             </p>
             <div className="row g-2">
               <div className="col-4">
-                <Image
-                  className="img-fluid"
-                  src={portafolio_1}
-                  alt="Image"
-                />
+                <Image className="img-fluid" src={portafolio_1} alt="Image" />
               </div>
               <div className="col-4">
-                <Image
-                  className="img-fluid"
-                  src={portafolio_2}
-                  alt="Image"
-                />
+                <Image className="img-fluid" src={portafolio_2} alt="Image" />
               </div>
               <div className="col-4">
-                <Image
-                  className="img-fluid"
-                  src={portafolio_3}
-                  alt="Image"
-                />
+                <Image className="img-fluid" src={portafolio_3} alt="Image" />
               </div>
               <div className="col-4">
-                <Image
-                  className="img-fluid"
-                  src={portafolio_4}
-                  alt="Image"
-                />
+                <Image className="img-fluid" src={portafolio_4} alt="Image" />
               </div>
               <div className="col-4">
-                <Image
-                  className="img-fluid"
-                  src={portafolio_5}
-                  alt="Image"
-                />
+                <Image className="img-fluid" src={portafolio_5} alt="Image" />
               </div>
               <div className="col-4">
-                <Image
-                  className="img-fluid"
-                  src={portafolio_6}
-                  alt="Image"
-                />
+                <Image className="img-fluid" src={portafolio_6} alt="Image" />
               </div>
             </div>
           </div>
@@ -132,7 +115,8 @@ function Footer() {
               <span />
             </p>
             <p>
-              Contamos con diferentes métodos de pagos que se adaptan a todos nuestros clientes.
+              Contamos con diferentes métodos de pagos que se adaptan a todos
+              nuestros clientes.
             </p>
             <div className="position-relative w-100 mt-3">
               {/* <input
@@ -148,11 +132,21 @@ function Footer() {
                 <i className="fa fa-paper-plane text-primary fs-4" />
               </button> */}
               <div className="footer__payment">
-                <a href="#"><Image src={payment_1} alt="payment" /></a>
-                <a href="#"><Image src={payment_2} alt="payment" /></a>
-                <a href="#"><Image src={payment_3} alt="payment" /></a>
-                <a href="#"><Image src={payment_4} alt="payment" /></a>
-                <a href="#"><Image src={payment_5} alt="payment" /></a>
+                <a href="#">
+                  <Image src={payment_1} alt="payment" />
+                </a>
+                <a href="#">
+                  <Image src={payment_2} alt="payment" />
+                </a>
+                <a href="#">
+                  <Image src={payment_3} alt="payment" />
+                </a>
+                <a href="#">
+                  <Image src={payment_4} alt="payment" />
+                </a>
+                <a href="#">
+                  <Image src={payment_5} alt="payment" />
+                </a>
               </div>
             </div>
           </div>
@@ -166,16 +160,20 @@ function Footer() {
               , Todos los derechos reservados 2022.
               <br />
               <br />
-              Designed By
-              <a href="https://angel-cv.vercel.app" target="_blank" rel="noreferrer">
-                &nbsp; Angel Becerra
+              Designed By&nbsp;
+              <a
+                href="https://angel-cv.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Angel Becerra
               </a>
             </div>
             <div className="col-md-6 text-center text-md-end">
               <div className="footer-menu">
                 <a href="#">Inicio</a>
                 <a href="">Cookies</a>
-                <a href="">FQAs</a>
+                <a href="">FAQs</a>
               </div>
             </div>
           </div>
