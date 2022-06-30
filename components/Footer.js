@@ -1,17 +1,17 @@
 import Image from "next/image";
-import portafolio_1 from "../styles/assets/img/portfolio-1.jpg"
-import portafolio_2 from "../styles/assets/img/portfolio-2.jpg"
-import portafolio_3 from "../styles/assets/img/portfolio-3.jpg"
-import portafolio_4 from "../styles/assets/img/portfolio-4.jpg"
-import portafolio_5 from "../styles/assets/img/portfolio-5.jpg"
-import portafolio_6 from "../styles/assets/img/portfolio-6.jpg"
+import Link from "next/link";
+import portafolio_1 from "../styles/assets/img/portfolio-1.jpg";
+import portafolio_2 from "../styles/assets/img/portfolio-2.jpg";
+import portafolio_3 from "../styles/assets/img/portfolio-3.jpg";
+import portafolio_4 from "../styles/assets/img/portfolio-4.jpg";
+import portafolio_5 from "../styles/assets/img/portfolio-5.jpg";
+import portafolio_6 from "../styles/assets/img/portfolio-6.jpg";
 
-import payment_1 from "../styles/assets/img/payment/payment-1.png"
-import payment_2 from "../styles/assets/img/payment/payment-2.png"
-import payment_3 from "../styles/assets/img/payment/payment-3.png"
-import payment_4 from "../styles/assets/img/payment/payment-4.png"
-import payment_5 from "../styles/assets/img/payment/payment-5.png"
-
+import payment_1 from "../styles/assets/img/payment/payment-1.png";
+import payment_2 from "../styles/assets/img/payment/payment-2.png";
+import payment_3 from "../styles/assets/img/payment/payment-3.png";
+import payment_4 from "../styles/assets/img/payment/payment-4.png";
+import payment_5 from "../styles/assets/img/payment/payment-5.png";
 
 function Footer() {
   return (
@@ -171,9 +171,9 @@ function Footer() {
             </div>
             <div className="col-md-6 text-center text-md-end">
               <div className="footer-menu">
-                <a href="#">Inicio</a>
-                <a href="">Cookies</a>
-                <a href="">FAQs</a>
+                <a href="/">Inicio</a>
+                <a href="#">Cookies</a>
+                <Link href="/FAQs">FAQs</Link>
               </div>
             </div>
           </div>
