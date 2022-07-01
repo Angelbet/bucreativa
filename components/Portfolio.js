@@ -1,7 +1,11 @@
-if (typeof window !== "undefined") {
-}
+import jQuery from "jquery";
+import $ from "jquery"
+import Scrip1 from "./Script1";
+
+
 
 function Portfolio() {
+
   return (
     <>
       <section id="portafolio">
@@ -202,6 +206,7 @@ function Portfolio() {
           </div>
         </div>
       </section>
+      <Scrip1 />
     </>
   );
 }

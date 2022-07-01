@@ -192,8 +192,11 @@ if (typeof window !== "undefined") {
 
 
 
+
+
 function Scrip1() {
-  return <div></div>;
+  return <>
+  </>;
 }
 
 export default Scrip1;

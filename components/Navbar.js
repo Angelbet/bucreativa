@@ -38,7 +38,7 @@ function Footer() {
       <section className="navigation">
         <div className="nav-container">
           <div className="brand">
-            <a href="#">
+            <a href="/">
               <span className="bu">Bú</span> Creativa
             </a>
           </div>
