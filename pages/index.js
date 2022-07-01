@@ -18,14 +18,7 @@ import team_3 from "../styles/assets/img/DiseñoGráfico.png";
 import jQuery from "jquery";
 import $ from "jquery";
 
-
-
-
-
 if (typeof window !== "undefined") {
- 
-
-
   $(document).ready(function () {
     $(".counter").each(function () {
       var count = $(this);
@@ -48,16 +41,9 @@ if (typeof window !== "undefined") {
       );
     });
   });
-  
-
 }
 
-
-
 export default function Home() {
-
-
-
   return (
     <>
       <Head>
