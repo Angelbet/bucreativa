@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+
 import Footer from "../components/Footer";
 import Script1 from "../components/Script1";
 import Portfolio from "../components/Portfolio";
@@ -18,8 +19,6 @@ import jQuery from "jquery";
 import $ from "jquery";
 
 if (typeof window !== "undefined") {
- 
-
   $(document).ready(function () {
     $(".counter").each(function () {
       var count = $(this);
@@ -42,7 +41,6 @@ if (typeof window !== "undefined") {
       );
     });
   });
-   
 }
 
 export default function Home() {

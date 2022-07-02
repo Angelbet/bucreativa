@@ -156,8 +156,8 @@ function Footer() {
         <div className="copyright">
           <div className="row">
             <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              ©<a href="#">Bú Creativa</a>
-              , Todos los derechos reservados 2022.
+              ©&nbsp;{new Date().getFullYear()}&nbsp;<a href="#">Bú Creativa</a>
+              , Todos los derechos reservados.
               <br />
               <br />
               Designed By&nbsp;
@@ -172,7 +172,7 @@ function Footer() {
             <div className="col-md-6 text-center text-md-end">
               <div className="footer-menu">
                 <a href="/">Inicio</a>
-                <a href="#">Cookies</a>
+                <a href="javascript:location.reload()">Cookies</a>
                 <Link href="/FAQs">FAQs</Link>
               </div>
             </div>
