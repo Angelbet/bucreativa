@@ -1,3 +1,4 @@
+import Link from "next/link";
 import jQuery from "jquery";
 import $ from "jquery";
 
@@ -38,9 +39,9 @@ function Footer() {
       <section className="navigation">
         <div className="nav-container">
           <div className="brand">
-            <a href="/">
+            <Link href="/">
               <span className="bu">Bú</span> Creativa
-            </a>
+            </Link>
           </div>
           <nav>
             <div className="nav-mobile">

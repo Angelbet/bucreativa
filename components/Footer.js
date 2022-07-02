@@ -171,7 +171,7 @@ function Footer() {
             </div>
             <div className="col-md-6 text-center text-md-end">
               <div className="footer-menu">
-                <a href="/">Inicio</a>
+                <Link href="/">Inicio</Link>
                 <a href="javascript:location.reload()">Cookies</a>
                 <Link href="/FAQs">FAQs</Link>
               </div>
