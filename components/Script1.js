@@ -185,6 +185,7 @@ if (typeof window !== "undefined") {
   });
 
 
+  
 
   
 
@@ -194,9 +195,9 @@ if (typeof window !== "undefined") {
 
 
 
-function Scrip1() {
+function Home() {
   return <>
   </>;
 }
 
-export default Scrip1;
+export default Home;

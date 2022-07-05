@@ -12,14 +12,14 @@ function Home() {
     }
   }
   return (
-    <>
+    <div>
       <Navbar />
 
       <div>testeo</div>
 
       <Footer />
       <Script1 />
-    </>
+    </div>
   );
 }
 

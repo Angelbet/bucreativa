@@ -18,32 +18,35 @@ import team_3 from "../styles/assets/img/DiseñoGráfico.png";
 import jQuery from "jquery";
 import $ from "jquery";
 
-if (typeof window !== "undefined") {
-  $(document).ready(function () {
-    $(".counter").each(function () {
-      var count = $(this);
-      var countTo = count.attr("data-count");
-      // console.log(countTo);
-      $({ countNum: count.text() }).animate(
-        {
-          countNum: countTo,
-        },
-        {
-          duration: 5000,
-          easing: "linear",
-          step: function () {
-            count.text(Math.floor(this.countNum));
-          },
-          complete: function () {
-            count.text(this.countNum);
-          },
-        }
-      );
-    });
-  });
-}
 
 export default function Home() {
+
+  if (typeof window !== "undefined") {
+    $(document).ready(function () {
+      $(".counter").each(function () {
+        var count = $(this);
+        var countTo = count.attr("data-count");
+        // console.log(countTo);
+        $({ countNum: count.text() }).animate(
+          {
+            countNum: countTo,
+          },
+          {
+            duration: 5000,
+            easing: "linear",
+            step: function () {
+              count.text(Math.floor(this.countNum));
+            },
+            complete: function () {
+              count.text(this.countNum);
+            },
+          }
+        );
+      });
+    });
+  }
+
+
   return (
     <>
       <Head>
@@ -524,6 +527,49 @@ export default function Home() {
         </div>
       </section>
       {/* Equipo */}
+
+      {/* Brand Logos */}
+
+      
+
+      <div className="wrap">
+        <ul className="clients row justify-content-center">
+          <li className="col-lg-2">
+            <a href="">
+              <img
+                src="https://webslides.tv/static/images/logos/google.svg"
+                alt="Google"
+              />
+            </a>
+          </li>
+          <li className="col-lg-2">
+            <a href="">
+              <img
+                src="https://webslides.tv/static/images/logos/airbnb.svg"
+                alt="Airbnb"
+              />
+            </a>
+          </li>
+          <li className="col-lg-2">
+            <a href="">
+              <img
+                src="https://webslides.tv/static/images/logos/apple.svg"
+                alt="Apple"
+              />
+            </a>
+          </li>
+          <li className="col-lg-2">
+            <a href="">
+              <img
+                src="https://webslides.tv/static/images/logos/microsoft.svg"
+                alt="Microsoft"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Brand Logos */}
 
       {/* Portafolio */}
       <Portfolio />
